@@ -1,0 +1,12 @@
+.container {
+    color: var(--main-color);
+}
+strong{
+    color: rgb(35, 35, 54);
+}
+.mission p, .objectifs p, .valeur p, .engagement p{
+    color: #0c634d;
+}
+
+
+
