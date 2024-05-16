@@ -2,6 +2,7 @@
 //Free training on https://mudey.fr
 import React from 'react';
 import './HomeServices.css';
+import { Link } from 'react-router-dom';
 
 const HomeServices = () => {
 
@@ -10,31 +11,31 @@ const HomeServices = () => {
       icon: " ",
       title: "Production et Approvisionnement",
       description: "Nous produisons et faisons produire également l'ensemble des agriculteurs ayant adhérés à notre système de fonctionnement, des produits agricoles qui servent de matière première pour la production des aliments destinés à la consommation humaine et animale. Nous nous approvisionnons donc auprès des agriculteurs formés et qui ont compris l'importance de la sécurité alimentaire.",
-      link: "",
+      link: "/production",
     },
     {
       icon: "",
       title: " Stockage des Produits",
       description: "Le stockage des produits agricoles est une pièce maîtresse de la chaîne d'approvisionnement alimentaire, où la préservation de la qualité et de la quantité des récoltes est essentielle pour répondre aux besoins croissants de la population mondiale. ",
-      link: "",
+      link: "/stockage",
     },
     {
       icon: "",
       title: "Transformation des Produits",
       description: "La transformation des produits est un élément essentiel de notre économie et de notre société. Des champs aux usines, des idées aux innovations, ce processus complexe façonne notre monde de manière profonde et continue à évoluer pour répondre aux besoins et aux exigences d'une société en mutation constante.",
-      link: "",
+      link: "/transformation",
     },
     {
       icon: "",
       title: "Transport des Produits Agricoles",
       description: "Nous exportons vers le marché européen, américain et asiatique, des matières premières agricoles de qualité et ceci en respectant les normes adéquates. Notre politique qualité est basée sur la sécurité alimentaire et le respect strict des normes internationales.",
-      link: "",
+      link: "/transport",
     },
     {
       icon: "",
       title: "Commercialisation des Intrants et Equipements Agricoles",
       description: "Les intrants sont les différents produits apportés aux terres et aux cultures, dans le but d'améliorer et d'augmenter les rendements. Les agriculteurs sont de plus en plus confrontés aux difficultés d'appauvrissement du sol entraînant ainsi la baisse des rendements. C'est pourquoi, les défis actuels sont principalement la recherche de solutions innovantes en matière d'intrants agricoles. Il faut des intrants compatibles avec une agriculture économiquement viable et qui maintiennent la fertilité des sols. AFRISILO contribue à cette recherche de solutions en proposant aux agriculteurs des intrants soigneusement sélectionnés.",
-      link: "",
+      link: "/commercialisation",
     },
   ]
   
@@ -63,8 +64,8 @@ const HomeServices = () => {
                 </div>
                 <div className="service-action">
                   <button>
-
-                  + DE DETAILS
+                  <Link to={service.link}>+ DE DETAILS </Link>
+                  
                   </button>
                 </div>
           </div>
