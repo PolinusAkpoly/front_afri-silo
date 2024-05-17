@@ -21,11 +21,8 @@ import Admin from './components/Admin/Admin';
 import TestForm from './components/TestForm/TestForm';
 import WhatsAppComponent from './components/WhatsAppComponent/WhatsAppComponent';
 import AboutReferences from './components/AboutReferences/AboutReferences';
-import Production from './components/Production/Production';
-import StockageProduits from './components/StockageProduits/StockageProduits';
-import TransportProduits from './components/TransportProduits/TransportProduits';
-import TransformationProduits from './components/TransformationProduits/TransformationProduits';
-import CommercialisationProduits from './components/CommercialisationProduits/CommercialisationProduits';
+import SingleProduit from './components/SingleProduit/SingleProduit';
+import AllProduits from './components/AllProduits/AllProduits';
 
 function App() {
 
@@ -57,11 +54,9 @@ function App() {
         <Route path="/references" element={<AboutReferences />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/about-us" element={<About />} />
-        <Route path="/production" element={<Production />} />
-        <Route path="/stockage" element={<StockageProduits />} />
-        <Route path="/transport" element={<TransportProduits />} />
-        <Route path="/transformation" element={<TransformationProduits />} />
-        <Route path="/commercialisation" element={<CommercialisationProduits />} />
+        
+        <Route path="/service/:slug" element={<SingleProduit />} />
+        <Route path="/all-product" element={<AllProduits />} />
         
         <Route path="/admin" element={<Admin />} />
         {/* FOOTER  */}

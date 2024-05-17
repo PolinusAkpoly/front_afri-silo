@@ -1,1 +1,18 @@
 .Home {}
+
+.allProducts{
+    display: flex;
+    justify-content: center;
+}
+.allProducts button{
+    border: none;
+    border-radius: 5px;
+    color: white;
+    background-color: var(--main-color);
+    padding: 9px 12px;
+    margin-top: 15px;
+    margin-bottom: 30px;
+
+}
+
+

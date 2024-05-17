@@ -3,6 +3,7 @@
 }
 strong{
     color: rgb(35, 35, 54);
+    font-weight: bold;
 }
 .mission p, .objectifs p, .valeur p, .engagement p{
     color: #0c634d;

@@ -9,6 +9,7 @@ import Reviews from '../Reviews/Reviews';
 import Slider from '../Slider/Slider';
 import Slogan from '../Slogan/Slogan';
 import './Home.css';
+import { Link } from 'react-router-dom';
 
 interface HomeProps { }
 
@@ -24,6 +25,13 @@ const Home: FC<HomeProps> = () => {
       <Slider />
       <HomeServices/>
       <HomeProducts />
+
+      <div className="allProducts">
+        <Link to="/all-product">
+          <button>TOUS NOS PRODUITS</button>
+        </Link>
+        
+      </div>
       {/* <Slogan />
       <Reviews /> */}
       {/* <CallToAction /> */}
