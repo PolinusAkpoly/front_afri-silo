@@ -9,11 +9,13 @@ Free training on https://mudey.fr
     grid-gap: 15px;
 }
 .HomeServices .service-item{
-    border: 1px solid #eee;
+    border: 1px solid #adacac;
     transition: all 0.3s ease-in-out;
     min-height: 280px;
     padding: 20px;
-    margin-bottom: 20px
+    margin-bottom: 20px;
+    box-shadow: 2px 2px 7px rgba(133, 132, 132, 0.5);
+
 }
 .HomeServices .service-item .service-icon i{
     font-size: 2.5rem;

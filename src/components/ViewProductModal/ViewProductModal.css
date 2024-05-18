@@ -6,3 +6,20 @@
 */
 
 .ViewProductModal {}
+
+.modal{
+  display: flex;
+  /* justify-self: center !important; */
+  /* align-content: center; */
+}
+.modal-content{
+  /* width: 700px !important; */
+}
+.modal-content button a{
+  text-decoration: none;
+  color: var(--main-color-write);
+}
+
+
+
+

@@ -8,15 +8,19 @@ import React, { FC, useEffect } from 'react';
 import './ViewProductModal.css';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
+import { Link } from 'react-router-dom';
 
 
 interface ViewProductModalProps {
- 
+  handleClose: ()=> void
+  show: boolean
+  slugProductSelect: string | undefined
 }
 
 
-const ViewProductModal : FC<ViewProductModalProps> = () =>{
+const ViewProductModal : FC<ViewProductModalProps> = ({handleClose, show, slugProductSelect}) =>{
 
+console.log(slugProductSelect);
 
 
     useEffect(() => {
@@ -29,21 +33,18 @@ const ViewProductModal : FC<ViewProductModalProps> = () =>{
 
     return (
       <>
-        <Button variant="primary" onClick={handleShow}>
-          Launch demo modal
-        </Button>
-  
+       
         <Modal show={show} onHide={handleClose} animation={false}>
           <Modal.Header closeButton>
-            <Modal.Title>Modal heading</Modal.Title>
+            <Modal.Title>DETAILS DU PRODUIT</Modal.Title>
           </Modal.Header>
           <Modal.Body>Woohoo, you are reading this text in a modal!</Modal.Body>
           <Modal.Footer>
             <Button variant="secondary" onClick={handleClose}>
-              Close
+              FERMER
             </Button>
             <Button variant="primary" onClick={handleClose}>
-              Save Changes
+              <Link to="/contact">NOUS CONTACTER</Link>
             </Button>
           </Modal.Footer>
         </Modal>
