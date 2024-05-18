@@ -2,19 +2,37 @@
 //Free training on https://mudey.fr
 import React from 'react';
 import './ProductItem.css';
+import ViewProductModal from '../ViewProductModal/ViewProductModal';
+
+
+
 
 const ProductItem = (props: any) => {
   const product = props.product
+  console.log(product);
   
+
+
+
+const onpenViewProductModal = (event: any, _id: string) =>{
+event.preventDefault()
+
+}
+
+
+
   return(
   <div className="ProductItem flex column jcsb" data-testid="ProductItem">
+
+       <ViewProductModal/>
+
     <div className="ProductItem-image">
       <img src={product.imageUrl}/>
     </div>
     <div className="ProductItem-name">
       {product.name}
     </div>
-    <button className="">
+    <button onClick={(event)=>onpenViewProductModal(event, product._id)} className="">
       + En savoir plus
     </button>
   </div>

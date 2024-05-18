@@ -15,10 +15,7 @@
 
 .AllProduits {}
 
-.listProduct{
-  border-left: 4px solid rgb(143, 141, 141);
-  
-}
+
 .listProduct ul{
   display: flex;
   flex-direction: column;
@@ -42,8 +39,10 @@
   border-left: 4px solid var(--main-color);
   cursor: pointer;
 }
-.listProduct .ligne{
-
+.description-product{
+  color: rgb(1, 1, 31);
+  font-weight: bold;
+  margin-top: -40px;
 }
 
 

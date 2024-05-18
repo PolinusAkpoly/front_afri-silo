@@ -153,14 +153,7 @@ const handleSelectProduct = (_id: string) =>{
               :
               null
             }
-            {/* <li className='liSelected'> MAIS</li>
-            <li>SOJA</li>
-            <li>CESAME</li>
-            <li> FONIO</li>
-            <li> KARITE</li>
-            <li> NOIX DE CAJOU</li>
-            <li> ANANAS</li>
-            <li>MANGUE</li> */}
+            
           </ul>
         </div>
         

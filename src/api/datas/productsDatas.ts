@@ -33,7 +33,7 @@ export const productDatas = [
         _id: '89559648795845',
         name: 'maïs rouge',
         slug: 'maïs-rouge-789925125',
-        imageUrl: '/assets/products/mais-bleu.png',
+        imageUrl: '/assets/products/mais-rouge.png',
         description: "Le maïs rouge est une variété de maïs distincte par sa couleur rouge profonde, qui provient de pigments naturels appelés anthocyanines. Originaire des Amériques, cette variété est souvent cultivée pour des usages spécifiques, y compris la consommation humaine, la production de farine, et comme ingrédient dans diverses préparations culinaires traditionnelles et artisanales.",
         category: 'cereales',
         updated_at: '',
