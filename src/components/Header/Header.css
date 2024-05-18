@@ -57,8 +57,15 @@
     color: var(--main-color-white) !important;
     background-color: var(--main-color);
 }
-
-
+#dropdown-basic{
+    background: none!important;
+    color: var(--main-color) !important;
+    border: none;
+    font-weight: bold;
+}
+#dropdown-basic:hover{
+    color: var(--main-color-white) !important;
+}
 /* Small devices (landscape phones, 576px and up) */
 @media (max-width: 576px) {}
 

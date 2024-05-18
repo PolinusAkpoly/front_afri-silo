@@ -7,7 +7,7 @@ export const slugyfy  = (name: string): string =>{
     .replace(/--+/g, '-') // Remplacer les doubles tirets par un seul tiret
     .trim(); // Supprimer les espaces au début et à la fin
 
-    return `${baseSlug}-115`;
+    return `${baseSlug}-895624585`;
 }
 
 // return `${baseSlug}-${randomNumber}`;

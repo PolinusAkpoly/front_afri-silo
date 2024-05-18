@@ -1,24 +1,28 @@
 import React, { FC, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { routes } from '../../api/routes';
+// import { routes } from '../../api/routes';
 import './Header.css';
-import { Nav, Navbar, NavLink, Container } from "react-bootstrap";
+// import { Nav, Navbar, NavLink, Container } from "react-bootstrap";
+import Dropdown from 'react-bootstrap/Dropdown';
 import { siteName, sitePhone } from '../../environements/env';
+import { servicesDatas } from '../../api/datas/servicesDatas';
+import { Service } from '../../models/Service';
+import { categorysDatas } from '../../api/datas/categorysDatas';
+import { Category } from '../../models/Category';
+
 
 interface HeaderProps { }
 
 const Header: FC<HeaderProps> = () => {
 
+
+const services = servicesDatas
+const categorys = categorysDatas
+
   useEffect(() => {
 
 
-    // const navItems = document.querySelectorAll(".nav-item")
-    // navItems.forEach((item)=>{
-    //   item.addEventListener("click", ()=>{
-    //     const element = document.querySelector(".navbar-toggler") as HTMLElement
-    //     element.click()
-    //   })
-    // })
+  
   })
 
   return (
@@ -38,33 +42,8 @@ const Header: FC<HeaderProps> = () => {
           </div>
         </div>
       </div>
-      {/* <div className="container">
-        <Navbar collapseOnSelect expand="md" className="navbar   navbar-expand-lg navbar-light bg-light">
-
-
-
-          <Navbar.Toggle aria-controls="navbarScroll" data-bs-toggle="collapse" data-bs-target="#navbarScroll" />
-
-          <Navbar.Collapse id="navbarScroll" className="justify-content-center">
-
-            <Nav>
-              {
-                routes.map((route, index) => {
-                  return <NavLink
-                    eventKey={index}
-                    as={Link}
-                    to={route.path}>{route.name}
-                  </NavLink>
-                })
-              }
-
-            </Nav>
-
-          </Navbar.Collapse>
-
-        </Navbar>
-
-      </div> */}
+      
+   
 
 
 
@@ -88,7 +67,7 @@ const Header: FC<HeaderProps> = () => {
         <a data-rr-ui-event-key="1" className="nav-link active" href="/about-us">
           À Propos
         </a>
-        <div className="nav-item dropdown">
+        {/* <div className="nav-item dropdown">
           <a id="collapsible-nav-dropdown" aria-expanded="false" role="button" className="dropdown-toggle nav-link" href="#">
             Nos Services
           </a>
@@ -106,7 +85,52 @@ const Header: FC<HeaderProps> = () => {
               Hydraulique et Systèmes de Pompage d'Eau
             </a>
           </div>
-        </div>
+        </div> */}
+
+
+<a href="#">
+<Dropdown>
+      <Dropdown.Toggle variant="success" id="dropdown-basic" className="Dropdown.Toggle">
+      Nos Services
+      </Dropdown.Toggle>
+
+      <Dropdown.Menu>
+        {
+          services.length ?
+          services.map((service: Service, index: number)=>{
+            return <Dropdown.Item href={"/service/" + service.slug} key={index}>{service.title}</Dropdown.Item>
+
+          })
+          :
+          null
+        }
+       
+      </Dropdown.Menu>
+    </Dropdown>
+    </a>
+    <a href="#">
+    <Dropdown>
+      <Dropdown.Toggle variant="success" id="dropdown-basic">
+        Nos Produits
+      </Dropdown.Toggle>
+
+      <Dropdown.Menu>
+      {
+          categorys.length ?
+          categorys.map((category: Category, index: number)=>{
+            return <Dropdown.Item href={"/produit/" + category.slug} key={index}>{category.name}</Dropdown.Item>
+
+          })
+          :
+          null
+        }
+      </Dropdown.Menu>
+    </Dropdown>
+    </a>
+
+
+
+
         <a data-rr-ui-event-key="4" className="nav-link" href="/contact">
           Contact
         </a>

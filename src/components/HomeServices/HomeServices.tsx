@@ -3,48 +3,12 @@
 import React from 'react';
 import './HomeServices.css';
 import { Link } from 'react-router-dom';
-import { slugyfy } from '../../api/helpers/utils';
+import { servicesDatas } from '../../api/datas/servicesDatas';
 
 const HomeServices = () => {
 
-  const services = [
-    {
-      icon: " ",
-      title: "Production et Approvisionnement",
-      description: "Nous produisons et faisons produire également l'ensemble des agriculteurs ayant adhérés à notre système de fonctionnement ...",
-      link: "/production",
-      slug: slugyfy("Production et Approvisionnement")
-    },
-    {
-      icon: "",
-      title: " Stockage des Produits",
-      description: "Le stockage des produits agricoles est une pièce maîtresse de la chaîne d'approvisionnement alimentaire ... ",
-      link: "/stockage",
-      slug: slugyfy("Stockage des Produits")
-    },
-    {
-      icon: "",
-      title: "Transformation des Produits",
-      description: "La transformation des produits est un élément essentiel de notre économie et de notre société ... ",
-      link: "/transformation",
-      slug: slugyfy("Transformation des Produits")
-    },
-    {
-      icon: "",
-      title: "Transport des Produits Agricoles",
-      description: "Nous exportons vers le marché européen, américain et asiatique, des matières premières agricoles de qualité ...",
-      link: "/transport",
-      slug: slugyfy("Transport des Produits Agricoles")
-    },
-    {
-      icon: "",
-      title: "Commercialisation des Intrants et Equipements Agricoles",
-      description: "Les intrants sont les différents produits apportés aux terres et aux cultures, dans le but d'améliorer et d'augmenter les rendements ... ",
-      link: "/commercialisation",
-      slug: slugyfy("Commercialisation des Intrants et Equipements Agricoles")
-    },
-  ]
-  
+ 
+  const services = servicesDatas
   
   return (
   <div className="HomeServices container p-3" data-testid="HomeServices">

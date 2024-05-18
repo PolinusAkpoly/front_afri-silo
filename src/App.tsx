@@ -23,6 +23,7 @@ import WhatsAppComponent from './components/WhatsAppComponent/WhatsAppComponent'
 import AboutReferences from './components/AboutReferences/AboutReferences';
 import SingleProduit from './components/SingleProduit/SingleProduit';
 import AllProduits from './components/AllProduits/AllProduits';
+import ProduitsPerCategory from './components/ProduitsPerCategory/ProduitsPerCategory';
 
 function App() {
 
@@ -57,7 +58,10 @@ function App() {
         
         <Route path="/service/:slug" element={<SingleProduit />} />
         <Route path="/all-product" element={<AllProduits />} />
+        <Route path="/produit/:slug" element={<ProduitsPerCategory />} />
         
+
+
         <Route path="/admin" element={<Admin />} />
         {/* FOOTER  */}
         <Route path="/plan-vol" element={<PlanVols
