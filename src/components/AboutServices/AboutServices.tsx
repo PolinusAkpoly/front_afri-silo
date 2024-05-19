@@ -16,6 +16,7 @@ const AboutServices: FC<AboutServicesProps> = () => {
 
   const [show, setShow] = useState(false)
   const [service, setService] = useState({})
+console.log(service);
 
   return (
     <div className="AboutServices" data-testid="AboutServices">
@@ -47,7 +48,7 @@ const AboutServices: FC<AboutServicesProps> = () => {
                           <div className="service-item  animate__zoomIn">
                             <div className="service-header gap-2  d-flex ">
                               <div className="service-image">
-                                <img src={service.image} width="100%" alt={"Image " + service.title} />
+                                <img src={service.imageUrl} width="100%" alt={"Image " + service.title} />
                               </div>
                             </div>
                             <div className="service-content">
@@ -65,7 +66,7 @@ const AboutServices: FC<AboutServicesProps> = () => {
                                 </button>
                               </div>
                               <div className="service-description">
-                                {/* {service.content} */}
+                                {service.description}
                               </div>
 
                             </div>
@@ -85,7 +86,7 @@ const AboutServices: FC<AboutServicesProps> = () => {
         </div>
       </div>
 
-      <Partenaires />
+      {/* <Partenaires /> */}
     </div>
   )
 }

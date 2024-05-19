@@ -12,10 +12,7 @@
   /* justify-self: center !important; */
   /* align-content: center; */
 }
-.modal-content{
-  width: 740px !important;
-  margin-left: -150px;
-}
+
 .modal-content button a{
   text-decoration: none;
   color: var(--main-color-write);
@@ -34,12 +31,7 @@ width: 350px;
   
 }
 
-@media (max-width: 900px) {
-  .modal-content{
-    width: 400px !important;
-    margin-left: 0px;
-  }
-}
+
 
 
 

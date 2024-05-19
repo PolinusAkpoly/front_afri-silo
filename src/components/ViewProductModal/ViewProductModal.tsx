@@ -29,7 +29,7 @@ const ViewProductModal: FC<ViewProductModalProps> = ({ handleClose, show, slugPr
 
   return (
     <>
-      <Modal show={show} onHide={handleClose} animation={false}>
+      <Modal show={show} onHide={handleClose} animation={false} size="lg">
         <Modal.Header closeButton>
           <Modal.Title>DETAILS DU PRODUIT</Modal.Title>
         </Modal.Header>

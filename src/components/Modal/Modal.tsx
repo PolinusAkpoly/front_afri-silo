@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 export default function Example(props: any) {
   const [show, setShow] = useState(true);
   const { handleClose } = props
-  const { title, content, image } = props.service
+  const { title, description, imageUrl } = props.service
 
   // const handleClose = () => {
   //   setShow(false)
@@ -32,9 +32,9 @@ export default function Example(props: any) {
         </Modal.Header>
         <Modal.Body>
           <div className="modal-image">
-            <img  src={image} alt="" height={400} />
+            <img  src={imageUrl} alt="" height={400} />
           </div>
-          {content}
+          {description}
         </Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={handleClose}>
