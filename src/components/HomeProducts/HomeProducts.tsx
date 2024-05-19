@@ -15,7 +15,7 @@ const HomeProducts = () => {
 
   useEffect(() => {
     $(document).ready(function () {
-      $('.products')?.slick({
+      ($('.products') as any)?.slick({
         slidesToShow: 4,
         slidesToScroll: 4,
         dots: true,

@@ -2,17 +2,18 @@
 //Free training on https://mudey.fr
 import React from 'react';
 import './WhatsAppComponent.css';
+import { siteWhatsApp } from '../../environements/env';
 
 const WhatsAppComponent = () => {
 
-  const link = "https://wa.me/33663353614?text=Bonjour%20AFC%20Tours%20.%20Je%20suis%20intéressé%20par%20vos%20services."
+  const link = "https://wa.me/"+ siteWhatsApp  +"?text=Bonjour Afrisilo. Je suis intéressé par vos services"
 
 
 
   return (
     <a href={link} target="_blank">
       <div className="WhatsAppComponent" data-testid="WhatsAppComponent">
-        <img src="assets/images/all/whatsapp.svg" />
+        <img src="/assets/images/all/whatsapp.svg" />
       </div>
     </a>
   )

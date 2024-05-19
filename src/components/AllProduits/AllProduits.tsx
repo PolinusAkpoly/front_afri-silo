@@ -20,7 +20,6 @@ interface AllProduitsProps {
 
 
 const AllProduits: FC<AllProduitsProps> = () => {
- const [isSelected, setIsSelected] = useState<boolean>(false);
  const [slug, setSlug] = useState<string>(productDatas[0]?.slug);
 //  const [currentProduct, setCurrentProduct] = useState<any>();
 
@@ -42,13 +41,6 @@ const productData = products.filter((product) => product.slug === slug);
 
 
 
-
-const handleSelectProduct = (slug: string) =>{
-  setIsSelected(!isSelected)
-  setSlug(slug)
-
-}
-
   return (
     <div className="">
       <HeaderPage name="TOUS NOS PRODUITS" />
@@ -68,7 +60,8 @@ const handleSelectProduct = (slug: string) =>{
             {
               products.length ?
               products.map((product: any, index)=>{
-                return <li key={index} onClick={()=>handleSelectProduct(product.slug)} className={`${isSelected ? 'liSelected' : ''}`}
+                return <li key={index} onClick={()=>setSlug(product.slug)} 
+                className={slug == product.slug ? 'liSelected' : ''}
                 >{product.name}</li>
               })
               :
