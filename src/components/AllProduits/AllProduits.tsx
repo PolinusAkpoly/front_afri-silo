@@ -8,12 +8,11 @@ import React, { FC, useEffect, useState } from 'react';
 import './AllProduits.css';
 import HeaderPage from '../HeaderPage/HeaderPage';
 import ProductItem from '../ProductItem/ProductItem';
+import { productDatas } from '../../api/datas/productsDatas';
 
 
-interface ProductList {
-  _id: string
-  name: string
-}
+
+
 
 interface AllProduitsProps {
 
@@ -22,97 +21,21 @@ interface AllProduitsProps {
 
 const AllProduits: FC<AllProduitsProps> = () => {
  const [isSelected, setIsSelected] = useState<boolean>(false);
- const [numberTable, setNumberTable] = useState<number>(0);
-console.log(numberTable);
+ const [slug, setSlug] = useState<string>(productDatas[0]?.slug);
+//  const [currentProduct, setCurrentProduct] = useState<any>();
 
 
 
 
-const productLists: ProductList[] = [
-  {
-    _id: '0',
-    name: "MAÏS"
-  },
-  {
-    _id: '1',
-    name: "SOJA"
-  },
-  {
-    _id: '2',
-    name: "CESAME"
-  },
-  {
-    _id: '3',
-    name: "FONIO"
-  },
-  {
-    _id: '4',
-    name: "KARITE"
-  },
-  {
-    _id: '5',
-    name: "NOIX DE CAJOU"
-  },
-  {
-    _id: '6',
-    name: "ANANAS"
-  },
-  {
-    _id: '7',
-    name: "MANGUE"
-  },
-]
-
-const products = [
-  [{
-    name: "Maïs Blanc",
-    imageUrl: "assets/products/soja.jpg",
-    link: "",
-  },
-  {
-    name: "Maïs jaune",
-    imageUrl: "assets/products/mais-blanc.jpg",
-    link: "",
-  },
-  {
-    name: "Maïs jaune",
-    imageUrl: "assets/products/acadju.png",
-    link: "",
-  },
-  {
-    name: "Maïs jaune",
-    imageUrl: "assets/products/fonio.png",
-    link: "",
-  },],
-  
-  [{
-    name: "SOJA",
-    imageUrl: "assets/products/soja2.jpg",
-    link: "",
-  },
-  {
-    name: "SOJA",
-    imageUrl: "assets/products/mais-jaune.jpg",
-    link: "",
-  },
-  {
-    name: "SOJA",
-    imageUrl: "assets/products/acadju.png",
-    link: "",
-  },
-  {
-    name: "SOJA",
-    imageUrl: "assets/products/cesame.png",
-    link: "",
-  },]
-]
 
 
+const products = productDatas
+const productData = products.filter((product) => product.slug === slug);
 
   useEffect(() => {
-    window.scrollTo(0, 0)
+    // window.scrollTo(0, 0)
     const runLocalData = async () => {
-
+      
     }
     runLocalData()
   })
@@ -120,11 +43,9 @@ const products = [
 
 
 
-const handleSelectProduct = (_id: string) =>{
-  
- let idToNombre = parseInt(_id);
-  setIsSelected(true)
-  setNumberTable(idToNombre)
+const handleSelectProduct = (slug: string) =>{
+  setIsSelected(!isSelected)
+  setSlug(slug)
 
 }
 
@@ -135,20 +56,20 @@ const handleSelectProduct = (_id: string) =>{
         <p>ACCUEIL / <strong className="text-uppercase">TOUS NOS PRODUITS</strong></p>
       
        <div className="row ">
-        <div className="col-lg-1"></div>
-       <div className="produits d-flex flex-wrap gap-2 col-lg-8">
-        {products[numberTable].map((product, index) => (
+        <div className="col-lg-2"></div>
+       <div className="produits d-flex flex-wrap gap-2 col-lg-6">
+        {productData && productData.map((product: any, index: number) => (
           <ProductItem product={product} key={index} />
         ))}
       </div>
       
-        <div className="listProduct col-lg-3">
+        <div className="listProduct col-lg-4">
           <ul>
             {
-              productLists.length ?
-              productLists.map((productList: ProductList)=>{
-                return <li onClick={()=>handleSelectProduct(productList?._id)} className={`${isSelected ? 'liSelected' : ''}`}
-                >{productList.name}</li>
+              products.length ?
+              products.map((product: any, index)=>{
+                return <li key={index} onClick={()=>handleSelectProduct(product.slug)} className={`${isSelected ? 'liSelected' : ''}`}
+                >{product.name}</li>
               })
               :
               null

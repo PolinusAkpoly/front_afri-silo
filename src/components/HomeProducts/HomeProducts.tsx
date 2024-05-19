@@ -7,52 +7,11 @@ import $ from 'jquery';
 import 'jquery-ui-bundle';
 import 'jquery-ui-bundle/jquery-ui.min.css';
 import 'slick-carousel';
+import { productDatas } from '../../api/datas/productsDatas';
 
 const HomeProducts = () => {
 
-  const products = [
-    {
-      name: "Le Soja",
-      imageUrl: "assets/products/soja.jpg",
-      link: "",
-    },
-    {
-      name: " Le Maïs Blanc",
-      imageUrl: "assets/products/mais-blanc.jpg",
-      link: "",
-    },
-    {
-      name: " Noix de Cajou",
-      imageUrl: "assets/products/acadju.png",
-      link: "",
-    },
-    {
-      name: " Le Fonio",
-      imageUrl: "assets/products/fonio.png",
-      link: "",
-    },
-    //===============
-    {
-      name: "Le Soja",
-      imageUrl: "assets/products/soja2.jpg",
-      link: "",
-    },
-    {
-      name: "Le Maïs Jaune",
-      imageUrl: "assets/products/mais-jaune.jpg",
-      link: "",
-    },
-    {
-      name: " Noix de Cajou",
-      imageUrl: "assets/products/acadju.png",
-      link: "",
-    },
-    {
-      name: "Le Cesame",
-      imageUrl: "assets/products/cesame.png",
-      link: "",
-    },
-  ]
+  const products = productDatas
 
   useEffect(() => {
     $(document).ready(function () {

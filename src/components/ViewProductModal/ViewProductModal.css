@@ -13,13 +13,33 @@
   /* align-content: center; */
 }
 .modal-content{
-  /* width: 700px !important; */
+  width: 740px !important;
+  margin-left: -150px;
 }
 .modal-content button a{
   text-decoration: none;
   color: var(--main-color-write);
 }
+.detaill-image img{
+width: 350px;
 
+
+}
+.detaill-text{
+  width: 250px;
+  
+}
+.detaill-text h1{
+  color: var(--main-color);
+  
+}
+
+@media (max-width: 900px) {
+  .modal-content{
+    width: 400px !important;
+    margin-left: 0px;
+  }
+}
 
 
 

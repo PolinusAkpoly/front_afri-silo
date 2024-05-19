@@ -28,7 +28,7 @@ setSlugProductSelect(slug)
 
 
   return(
-  <div className="ProductItem flex column jcsb" data-testid="ProductItem">
+  <div className="ProductItem flex  column jcsb" data-testid="ProductItem">
 
        {<ViewProductModal 
        handleClose={handleClose}
