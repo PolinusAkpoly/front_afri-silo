@@ -57,13 +57,13 @@ const handleSelectProduct = (slug: string) =>{
       
        <div className="row ">
         <div className="col-lg-2"></div>
-       <div className="produits d-flex flex-wrap gap-2 col-lg-6">
+       <div className="produits d-flex flex-wrap gap-2 col-lg-6 col-md-6 col-sm-6 col-md-6">
         {productData && productData.map((product: any, index: number) => (
           <ProductItem product={product} key={index} />
         ))}
       </div>
       
-        <div className="listProduct col-lg-4">
+        <div className="listProduct col-lg-4 col-md-6 col-sm-6">
           <ul>
             {
               products.length ?
