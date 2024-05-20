@@ -56,7 +56,6 @@
     font-weight: bold;
     color: var(--main-color-white) !important;
     background-color: var(--main-color);
-    
 }
 #dropdown-basic{
     background: none!important;
@@ -67,14 +66,13 @@
 #dropdown-basic:hover{
     color: var(--main-color-white) !important;
 }
-
 .dropdown-item:hover{
     width: 380px;
     margin-left: 10px;
 }
 .dropdown-menu{
-width: 400px;
-
+    
+    width: 400px;
 }
 /* Small devices (landscape phones, 576px and up) */
 @media (max-width: 576px) {}
