@@ -11,3 +11,13 @@ export const slugyfy  = (name: string): string =>{
 }
 
 // return `${baseSlug}-${randomNumber}`;
+
+
+export function truncateText(text: string, maxLength: number) {
+    if (text.length <= maxLength) {
+        return text;
+    }
+    return text.substring(0, maxLength) + '...';
+}
+
+

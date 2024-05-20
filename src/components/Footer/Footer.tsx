@@ -15,7 +15,7 @@ const Footer: FC<FooterProps> = () => (
         <div className="row">
           <div className="col-md-6 col-lg-3">
             <h3>{siteName}</h3>
-            <p>
+            <p className="text-white">
               {siteDescription}
             </p>
           </div>

@@ -126,6 +126,7 @@ import HeaderPage from '../HeaderPage/HeaderPage';
 import { useParams } from 'react-router-dom';
 import { slugyfy } from '../../api/helpers/utils';
 import { Service } from '../../models/Service';
+import { servicesDatas } from '../../api/datas/servicesDatas';
 
 
 interface SingleProduitProps {
@@ -135,48 +136,7 @@ interface SingleProduitProps {
 const SingleProduit: FC<SingleProduitProps> = () => {
  
   
-  const services = [
-    {
-      icon: " ",
-      imageUrl: "/assets/images/services/productions.png",
-      title: "Production et Approvisionnement",
-      description: "Nous produisons et faisons produire également l'ensemble des agriculteurs ayant adhéré à notre système de fonctionnement, des produits agricoles qui servent de matière première pour la production des aliments destinés à la consommation humaine et animale. Nous nous approvisionnons donc auprès des agriculteurs formés et qui ont compris l'importance de la sécurité alimentaire.",
-      link: "/production",
-      slug: slugyfy("Production et Approvisionnement")
-    },
-    {
-      icon: "",
-      imageUrl: "/assets/images/services/appi.png",
-      title: " Stockage des Produits",
-      description: "Le stockage des produits agricoles est une pièce maîtresse de la chaîne d'approvisionnement alimentaire, où la préservation de la qualité et de la quantité des récoltes est essentielle pour répondre aux besoins croissants de la population mondiale. ",
-      link: "/stockage",
-      slug: slugyfy("Stockage des Produits")
-    },
-    {
-      icon: "",
-      imageUrl: "/assets/images/services/transformation3.png",
-      title: "Transformation des Produits",
-      description: "La transformation des produits est un élément essentiel de notre économie et de notre société. Des champs aux usines, des idées aux innovations, ce processus complexe façonne notre monde de manière profonde et continue à évoluer pour répondre aux besoins et aux exigences d'une société en mutation constante.",
-      link: "/transformation",
-      slug: slugyfy("Transformation des Produits")
-    },
-    {
-      icon: "",
-      imageUrl: "/assets/images/services/transport.png",
-      title: "Transport des Produits Agricoles",
-      description: "Nous exportons vers le marché européen, américain et asiatique, des matières premières agricoles de qualité et ceci en respectant les normes adéquates. Notre politique qualité est basée sur la sécurité alimentaire et le respect strict des normes internationales.",
-      link: "/transport",
-      slug: slugyfy("Transport des Produits Agricoles")
-    },
-    {
-      icon: "",
-      imageUrl: "/assets/images/services/intrant.png",
-      title: "Commercialisation des Intrants et Equipements Agricoles",
-      description: "Les intrants sont les différents produits apportés aux terres et aux cultures, dans le but d'améliorer et d'augmenter les rendements. Les agriculteurs sont de plus en plus confrontés aux difficultés d'appauvrissement du sol entraînant ainsi la baisse des rendements. C'est pourquoi, les défis actuels sont principalement la recherche de solutions innovantes en matière d'intrants agricoles. Il faut des intrants compatibles avec une agriculture économiquement viable et qui maintiennent la fertilité des sols. AFRISILO contribue à cette recherche de solutions en proposant aux agriculteurs des intrants soigneusement sélectionnés.",
-      link: "/commercialisation",
-      slug: slugyfy("Commercialisation des Intrants et Equipements Agricoles")
-    },
-  ];
+  const services = servicesDatas
 
 
   const { slug }: any = useParams(); 

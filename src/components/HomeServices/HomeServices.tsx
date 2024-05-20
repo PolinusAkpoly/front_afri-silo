@@ -4,6 +4,7 @@ import React from 'react';
 import './HomeServices.css';
 import { Link } from 'react-router-dom';
 import { servicesDatas } from '../../api/datas/servicesDatas';
+import { truncateText } from '../../api/helpers/utils';
 
 const HomeServices = () => {
 
@@ -29,7 +30,7 @@ const HomeServices = () => {
                   </div>
                 </div>
                 <div className="service-description">
-                      {service.description}
+                      { truncateText(service.description, 200) }
 
                 </div>
                 <div className="service-action">

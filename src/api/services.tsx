@@ -5,142 +5,64 @@ export const services = [
         {
             _id: "45584",
             icon: " ",
-            title: "Production et Approvisionnement",
-            imageUrl: "/assets/images/services/productions.png",
-            description: "Nous produisons et faisons produire également l'ensemble des agriculteurs ayant adhérés à notre système de fonctionnement ...",
+            title: "Logistique des Produits Agricole",
+            imageUrl: "/assets/images/services/service-logistique.png",
+            description: "AFRISILO met un cachet très particulier sur la satisfaction client. Pour cela, la qualité, la transparence et la traçabilité sont de mise dans le traitement de nos opérations. Nous exportons vers le marché européen, américain et asiatique, des matières premières agricoles de qualité et ceci en respectant les normes adéquates. Notre politique qualité est basée sur la sécurité alimentaire et le respect strict des normes internationales. Nous produisons et faisons produire également l'ensemble des agriculteurs ayant adhérés à notre système de fonctionnement, des produits agricoles qui servent de matière première pour la production des aliments destinés à la consommation humaine et animale. Nous nous approvisionnons donc auprès des agriculteurs formés et qui ont compris l'importance de la sécurité alimentaire.",
             link: "/production",
-            slug: slugyfy("Production et Approvisionnement")
+            slug: slugyfy("Logistique des Produits Agricole")
         },
         {
             _id: "455455",
             icon: "",
-            title: " Stockage des Produits",
-            imageUrl: "/assets/images/services/appi.png",
-            description: "Le stockage des produits agricoles est une pièce maîtresse de la chaîne d'approvisionnement alimentaire ... ",
+            title: "Intrants et équipements agricoles",
+            imageUrl: "/assets/images/services/intrant-equipement.png",
+            description: "Les intrants sont les différents produits apportés aux terres et aux cultures, dans le but d'améliorer et d'augmenter les rendements. Les agriculteurs sont de plus en plus confrontés aux difficultés d'appauvrissement du sol entraînant ainsi la baisse des rendements. C'est pourquoi, les défis actuels sont principalement la recherche de solutions innovantes en matière d'intrants agricoles. Il faut des intrants compatibles avec une agriculture économiquement viable et qui maintiennent la fertilité des sols. AFRISILO contribue à cette recherche de solutions en proposant aux agriculteurs des intrants soigneusement sélectionnés. Par ailleurs, le développement agricole rime avec la mécanisation agricole. Et cela fait appel à des machines et équipements qui facilitent le travail agricole (de la production jusqu'à la livraison en passant par le conditionnement et le stockage). AFRISILO fait la promotion de la mécanisation agricole en mettant à disposition des agriculteurs des machines et équipements agricoles.",
             link: "/stockage",
-            slug: slugyfy("Stockage des Produits")
+            slug: slugyfy("Intrants et équipements agricoles")
         },
-        {
-            _id: "45545584",
-            icon: "",
-            title: "Transformation des Produits",
-            imageUrl: "assets/images/services/transformation3.png",
-            description: "La transformation des produits est un élément essentiel de notre économie et de notre société ... ",
-            link: "/transformation",
-            slug: slugyfy("Transformation des Produits")
-        },
-        {
-            _id: "45545584",
-            icon: "",
-            title: "Transport des Produits Agricoles",
-            imageUrl: "assets/images/services/transport.png",
-            description: "Nous exportons vers le marché européen, américain et asiatique, des matières premières agricoles de qualité ...",
-            link: "/transport",
-            slug: slugyfy("Transport des Produits Agricoles")
-        },
-        {
-            _id: "45545584",
-            icon: "",
-            title: "Commercialisation des Intrants et Equipements Agricoles",
-            imageUrl: "/assets/images/services/intrant.png",
-            description: "Les intrants sont les différents produits apportés aux terres et aux cultures, dans le but d'améliorer et d'augmenter les rendements ... ",
-            link: "/commercialisation",
-            slug: slugyfy("Commercialisation des Intrants et Equipements Agricoles")
-        },
+        
     ],
     /****  */
     [
         {
             _id: "45584",
             icon: " ",
-            title: "Production et Approvisionnement",
-            imageUrl: "/assets/images/services/productions.png",
-            description: "Nous produisons et faisons produire également l'ensemble des agriculteurs ayant adhérés à notre système de fonctionnement ...",
+            title: "Logistique des Produits Agricole",
+            imageUrl: "/assets/images/services/service-logistique.png",
+            description: "AFRISILO met un cachet très particulier sur la satisfaction client. Pour cela, la qualité, la transparence et la traçabilité sont de mise dans le traitement de nos opérations. Nous exportons vers le marché européen, américain et asiatique, des matières premières agricoles de qualité et ceci en respectant les normes adéquates. Notre politique qualité est basée sur la sécurité alimentaire et le respect strict des normes internationales. Nous produisons et faisons produire également l'ensemble des agriculteurs ayant adhérés à notre système de fonctionnement, des produits agricoles qui servent de matière première pour la production des aliments destinés à la consommation humaine et animale. Nous nous approvisionnons donc auprès des agriculteurs formés et qui ont compris l'importance de la sécurité alimentaire.",
             link: "/production",
-            slug: slugyfy("Production et Approvisionnement")
+            slug: slugyfy("Logistique des Produits Agricole")
         },
         {
             _id: "455455",
             icon: "",
-            title: " Stockage des Produits",
-            imageUrl: "/assets/images/services/appi.png",
-            description: "Le stockage des produits agricoles est une pièce maîtresse de la chaîne d'approvisionnement alimentaire ... ",
+            title: "Intrants et équipements agricoles",
+            imageUrl: "/assets/images/services/intrant-equipement.png",
+            description: "Les intrants sont les différents produits apportés aux terres et aux cultures, dans le but d'améliorer et d'augmenter les rendements. Les agriculteurs sont de plus en plus confrontés aux difficultés d'appauvrissement du sol entraînant ainsi la baisse des rendements. C'est pourquoi, les défis actuels sont principalement la recherche de solutions innovantes en matière d'intrants agricoles. Il faut des intrants compatibles avec une agriculture économiquement viable et qui maintiennent la fertilité des sols. AFRISILO contribue à cette recherche de solutions en proposant aux agriculteurs des intrants soigneusement sélectionnés. Par ailleurs, le développement agricole rime avec la mécanisation agricole. Et cela fait appel à des machines et équipements qui facilitent le travail agricole (de la production jusqu'à la livraison en passant par le conditionnement et le stockage). AFRISILO fait la promotion de la mécanisation agricole en mettant à disposition des agriculteurs des machines et équipements agricoles.",
             link: "/stockage",
-            slug: slugyfy("Stockage des Produits")
+            slug: slugyfy("Intrants et équipements agricoles")
         },
-        {
-            _id: "45545584",
-            icon: "",
-            title: "Transformation des Produits",
-            imageUrl: "assets/images/services/transformation3.png",
-            description: "La transformation des produits est un élément essentiel de notre économie et de notre société ... ",
-            link: "/transformation",
-            slug: slugyfy("Transformation des Produits")
-        },
-        {
-            _id: "45545584",
-            icon: "",
-            title: "Transport des Produits Agricoles",
-            imageUrl: "assets/images/services/transport.png",
-            description: "Nous exportons vers le marché européen, américain et asiatique, des matières premières agricoles de qualité ...",
-            link: "/transport",
-            slug: slugyfy("Transport des Produits Agricoles")
-        },
-        {
-            _id: "45545584",
-            icon: "",
-            title: "Commercialisation des Intrants et Equipements Agricoles",
-            imageUrl: "/assets/images/services/intrant.png",
-            description: "Les intrants sont les différents produits apportés aux terres et aux cultures, dans le but d'améliorer et d'augmenter les rendements ... ",
-            link: "/commercialisation",
-            slug: slugyfy("Commercialisation des Intrants et Equipements Agricoles")
-        },
+        
     ],
     [
         {
             _id: "45584",
             icon: " ",
-            title: "Production et Approvisionnement",
-            imageUrl: "/assets/images/services/productions.png",
-            description: "Nous produisons et faisons produire également l'ensemble des agriculteurs ayant adhérés à notre système de fonctionnement ...",
+            title: "Logistique des Produits Agricole",
+            imageUrl: "/assets/images/services/service-logistique.png",
+            description: "AFRISILO met un cachet très particulier sur la satisfaction client. Pour cela, la qualité, la transparence et la traçabilité sont de mise dans le traitement de nos opérations. Nous exportons vers le marché européen, américain et asiatique, des matières premières agricoles de qualité et ceci en respectant les normes adéquates. Notre politique qualité est basée sur la sécurité alimentaire et le respect strict des normes internationales. Nous produisons et faisons produire également l'ensemble des agriculteurs ayant adhérés à notre système de fonctionnement, des produits agricoles qui servent de matière première pour la production des aliments destinés à la consommation humaine et animale. Nous nous approvisionnons donc auprès des agriculteurs formés et qui ont compris l'importance de la sécurité alimentaire.",
             link: "/production",
-            slug: slugyfy("Production et Approvisionnement")
+            slug: slugyfy("Logistique des Produits Agricole")
         },
         {
             _id: "455455",
             icon: "",
-            title: " Stockage des Produits",
-            imageUrl: "/assets/images/services/appi.png",
-            description: "Le stockage des produits agricoles est une pièce maîtresse de la chaîne d'approvisionnement alimentaire ... ",
+            title: "Intrants et équipements agricoles",
+            imageUrl: "/assets/images/services/intrant-equipement.png",
+            description: "Les intrants sont les différents produits apportés aux terres et aux cultures, dans le but d'améliorer et d'augmenter les rendements. Les agriculteurs sont de plus en plus confrontés aux difficultés d'appauvrissement du sol entraînant ainsi la baisse des rendements. C'est pourquoi, les défis actuels sont principalement la recherche de solutions innovantes en matière d'intrants agricoles. Il faut des intrants compatibles avec une agriculture économiquement viable et qui maintiennent la fertilité des sols. AFRISILO contribue à cette recherche de solutions en proposant aux agriculteurs des intrants soigneusement sélectionnés. Par ailleurs, le développement agricole rime avec la mécanisation agricole. Et cela fait appel à des machines et équipements qui facilitent le travail agricole (de la production jusqu'à la livraison en passant par le conditionnement et le stockage). AFRISILO fait la promotion de la mécanisation agricole en mettant à disposition des agriculteurs des machines et équipements agricoles.",
             link: "/stockage",
-            slug: slugyfy("Stockage des Produits")
+            slug: slugyfy("Intrants et équipements agricoles")
         },
-        {
-            _id: "45545584",
-            icon: "",
-            title: "Transformation des Produits",
-            imageUrl: "assets/images/services/transformation3.png",
-            description: "La transformation des produits est un élément essentiel de notre économie et de notre société ... ",
-            link: "/transformation",
-            slug: slugyfy("Transformation des Produits")
-        },
-        {
-            _id: "45545584",
-            icon: "",
-            title: "Transport des Produits Agricoles",
-            imageUrl: "assets/images/services/transport.png",
-            description: "Nous exportons vers le marché européen, américain et asiatique, des matières premières agricoles de qualité ...",
-            link: "/transport",
-            slug: slugyfy("Transport des Produits Agricoles")
-        },
-        {
-            _id: "45545584",
-            icon: "",
-            title: "Commercialisation des Intrants et Equipements Agricoles",
-            imageUrl: "/assets/images/services/intrant.png",
-            description: "Les intrants sont les différents produits apportés aux terres et aux cultures, dans le but d'améliorer et d'augmenter les rendements ... ",
-            link: "/commercialisation",
-            slug: slugyfy("Commercialisation des Intrants et Equipements Agricoles")
-        },
+        
     ],
 ]

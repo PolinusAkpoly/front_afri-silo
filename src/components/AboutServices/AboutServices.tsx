@@ -5,6 +5,7 @@ import './AboutServices.css';
 import Modal from '../Modal/Modal';
 import { Carousel } from 'react-bootstrap';
 import Partenaires from '../Partenaires/Partenaires';
+import { truncateText } from '../../api/helpers/utils';
 
 interface AboutServicesProps { }
 
@@ -44,7 +45,7 @@ console.log(service);
                     {
 
                       elements.map((service, index) => {
-                        return <div className="col-md-6 col-lg-3" key={index}>
+                        return <div className="col-md-6 col-lg-6" key={index}>
                           <div className="service-item  animate__zoomIn">
                             <div className="service-header gap-2  d-flex ">
                               <div className="service-image">
@@ -66,7 +67,7 @@ console.log(service);
                                 </button>
                               </div>
                               <div className="service-description">
-                                {service.description}
+                              { truncateText(service.description, 200) }
                               </div>
 
                             </div>
