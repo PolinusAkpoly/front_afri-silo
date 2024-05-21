@@ -4,7 +4,7 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
-import Admin from './Admin';
+import Admin from './Admin-ancien';
 
 describe('<Admin />', () => {
   test('it should mount', () => {

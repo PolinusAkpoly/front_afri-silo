@@ -1,16 +1,22 @@
+/* eslint-disable */
 //Generate with new-react-cli : Fri, 01 Jul 2022 17:34:12 GMT
 //Free training on https://mudey.fr
-import React, { lazy, Suspense } from 'react';
+import Admin from './Admin-ancien';
 
-const LazyAdmin = lazy(() => import('./Admin'));
+export default {
+  title: "Admin",
+};
 
-const Admin = (props: JSX.IntrinsicAttributes & { children?: React.ReactNode; }) => (
-  <Suspense fallback={null}>
-    <LazyAdmin {...props} />
-  </Suspense>
-);
+export const Default = () => <Admin />;
 
-export default Admin;
+Default.story = {
+  name: 'default',
+};
+
+
+
+
+
 
 
 

@@ -4,13 +4,22 @@ import React from 'react';
 import './HomeServices.css';
 import { Link } from 'react-router-dom';
 import { servicesDatas } from '../../api/datas/servicesDatas';
-import { truncateText } from '../../api/helpers/utils';
+import { indexDB, truncateText } from '../../api/helpers/utils';
+
 
 const HomeServices = () => {
 
  
   const services = servicesDatas
   
+
+  const db = indexDB();
+  // db.addData('service', services[0])
+  //   .then((result) => console.log(result))
+  //   .catch((error) => console.error(error));
+
+
+
   return (
   <div className="HomeServices container p-3" data-testid="HomeServices">
     <h2 className='text-center mt-1'>NOS SERVICES</h2>

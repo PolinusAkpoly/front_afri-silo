@@ -63,6 +63,7 @@ function App() {
 
 
         <Route path="/admin" element={<Admin />} />
+        <Route path="/admin/:model" element={<Admin />} />
         {/* FOOTER  */}
         <Route path="/plan-vol" element={<PlanVols
 

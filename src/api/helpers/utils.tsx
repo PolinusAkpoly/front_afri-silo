@@ -1,3 +1,5 @@
+import { EsperoDB } from "esperodb";
+
 export const slugyfy  = (name: string): string =>{
     // const randomNumber = Math.floor(Math.random() * 1000); // Générer un nombre aléatoire entre 0 et 999
     let baseSlug =  name
@@ -20,4 +22,32 @@ export function truncateText(text: string, maxLength: number) {
     return text.substring(0, maxLength) + '...';
 }
 
-
+export function indexDB() {
+    // Définition de la structure des données
+    const dataStructure: any = [
+        {
+          'product': [
+            { indexes: [{ 'index1': { unique: true } }], primaryKey: 'id' },
+          ],
+        },
+        {
+          'service': [
+            { indexes: [{ 'index1': { unique: true } }], primaryKey: 'id' },
+          ],
+        },
+        {
+          'slider': [
+            { indexes: [{ 'index1': { unique: true } }], primaryKey: 'id' },
+          ],
+        },
+      ];
+  
+    // Définition de la version de la base de données
+    const dbVersion = 1;
+  
+    // Création d'une instance de la base de données locale
+    const db = new EsperoDB('afrisilo', dataStructure, dbVersion);
+  
+    return db;
+  }
+  

@@ -9,6 +9,7 @@ import './AllProduits.css';
 import HeaderPage from '../HeaderPage/HeaderPage';
 import ProductItem from '../ProductItem/ProductItem';
 import { productDatas } from '../../api/datas/productsDatas';
+import { EsperoDB } from 'esperodb';
 
 
 
@@ -30,6 +31,7 @@ const AllProduits: FC<AllProduitsProps> = () => {
 
 const products = productDatas
 const productData = products.filter((product) => product.slug === slug);
+
 
   useEffect(() => {
     // window.scrollTo(0, 0)

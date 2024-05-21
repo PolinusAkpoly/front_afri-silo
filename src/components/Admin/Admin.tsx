@@ -1,98 +1,87 @@
-//Generate with new-react-cli : Fri, 01 Jul 2022 17:34:12 GMT
-//Free training on https://mudey.fr
-import React from 'react';
+/*
+  Author : Mudey Formation
+  Website : https://mudey.fr/
+  App Name : E-commerce with React.Js
+  Created At : 21/05/2024 10:09:57
+*/
+import React, { FC, useEffect } from 'react';
 import './Admin.css';
+import { Link, useParams } from 'react-router-dom';
+import { indexDB } from '../../api/helpers/utils';
 
-const Admin = () => (
-  <div className="Admin" data-testid="Admin">
-    <div className="container b flex aic jcc">
-    <form action="">
-      <h2>Se connecter</h2>
-      <p>Connectez-vous pour gérer votre site Web</p>
-      <div className="form-line pt-2">
-        {/* <label>Email :</label> */}
-        <input type="text" name="email" id="email" placeholder='Votre email' className='form-control' />
+
+
+
+interface AdminProps {
+
+}
+
+
+const Admin: FC<AdminProps> = () => {
+  const dbInstance = indexDB();
+  const { model } = useParams()
+  console.log(model);
+
+ 
+
+
+
+  const runLocalData = async () => {
+    
+    if (model) {
+      
+      const  data = await dbInstance.getAllData(model)
+         
+      
+      console.log(data);
+    }
+
+    
+
+  }
+
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+
+    runLocalData()
+  })
+
+  return (
+    <div className="Admin">
+      <div className="container mt-5">
+        <button type="button" className="btn btn-primary mb-1">Ajouter</button>
+
+        <table className="table table-bordered">
+          <thead>
+            <tr>
+              <th>Menu</th>
+              <th>Contenu</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><Link to={'/admin/product'}>Produits</Link> </td>
+              <td>Produits</td>
+              <td>
+                <button type="button" className="btn btn-info">Voir</button>
+                <button type="button" className="btn btn-warning m-1">Modifier</button>
+                <button type="button" className="btn btn-danger mr-1">Supprimer</button>
+              </td>
+            </tr>
+            <tr>
+              <td><Link to={'/admin/service'}>Services</Link></td>
+            </tr>
+            <tr>
+              <td><Link to={'/admin/slider'}>Slider</Link></td>
+            </tr>
+
+          </tbody>
+        </table>
       </div>
-      <div className="form-line pt-2">
-        {/* <label>Password : </label> */}
-        <input type="text" name="password" id="password" placeholder='Votre mot de passe' className='form-control' />
-      </div>
-      <div className="form-line pt-2">
-        
-      <button className="btn btn-success">Se connecter</button>
-       
-      </div>
-    </form>
     </div>
-  </div>
-);
+  );
+}
 
 export default Admin;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//Generate with new-react-cli : Fri, 01 Jul 2022 17:34:12 GMT
-//Free training on sur https://mudey.fr
-//Teacher Profile : https://mudey.fr/user/espero-akpoli
-//Teacher Email : eakpoli@mudey.fr
-//Teacher WhatsApp : +33 7 77 67 41 57

@@ -8,10 +8,18 @@ import 'jquery-ui-bundle';
 import 'jquery-ui-bundle/jquery-ui.min.css';
 import 'slick-carousel';
 import { productDatas } from '../../api/datas/productsDatas';
+import { indexDB } from '../../api/helpers/utils';
+
 
 const HomeProducts = () => {
 
   const products = productDatas
+console.log(products);
+const db = indexDB();
+// db.addData('product', products[0])
+//   .then((result) => console.log(result))
+//   .catch((error) => console.error(error));
+
 
   useEffect(() => {
     $(document).ready(function () {
