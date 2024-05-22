@@ -13,12 +13,15 @@ import { indexDB } from '../../api/helpers/utils';
 
 const HomeProducts = () => {
 
-  const products = productDatas
-console.log(products);
-const db = indexDB();
-// db.addData('product', products[0])
-//   .then((result) => console.log(result))
-//   .catch((error) => console.error(error));
+  const products = productDatas;
+  for (let index = 0; index < products.length; index++) { 
+    const product = products[index];
+    // const db = indexDB();
+    // db.addData('product', product)
+    //   .then((result) => console.log(result))
+    //   .catch((error) => console.error(error));
+  }
+  
 
 
   useEffect(() => {

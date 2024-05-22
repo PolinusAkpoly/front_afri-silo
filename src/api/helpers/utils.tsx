@@ -27,17 +27,17 @@ export function indexDB() {
     const dataStructure: any = [
         {
           'product': [
-            { indexes: [{ 'index1': { unique: true } }], primaryKey: 'id' },
+            { indexes: [{ 'index1': { unique: true } }], primaryKey: '_id' },
           ],
         },
         {
           'service': [
-            { indexes: [{ 'index1': { unique: true } }], primaryKey: 'id' },
+            { indexes: [{ 'index1': { unique: true } }], primaryKey: '_id' },
           ],
         },
         {
           'slider': [
-            { indexes: [{ 'index1': { unique: true } }], primaryKey: 'id' },
+            { indexes: [{ 'index1': { unique: true } }], primaryKey: '_id' },
           ],
         },
       ];
@@ -50,4 +50,58 @@ export function indexDB() {
   
     return db;
   }
+  export function addSpacesToPascalCase(str: string): string {
+    if (typeof str !== 'string' || str.length === 0) {
+      return str
+    }
   
+    const result = str.replace(/([a-z])([A-Z])/g, '$1 $2')
+    return result.charAt(0).toUpperCase() + result.slice(1)
+  }
+  export function ucfirst(str: string): string {
+    str = str.toLowerCase()
+    if (typeof str !== 'string' || str.length === 0) {
+      return str
+    }
+  
+    if (str.toLowerCase().endsWith('name')) {
+      return str
+        .split('name')
+        .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+        .join(' Name')
+    }
+    if (str.toLowerCase().includes('_')) {
+      return str
+        .split('_')
+        .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+        .join(' ')
+    }
+  
+    return addSpacesToPascalCase(str)
+  }
+  
+ export const getHTMLContent = (data: any, name: string) => {
+    if (typeof data[name] === 'string' && data[name].match(/\.(jpeg|jpg|gif|png|webp)$/) != null) {
+      // Si data[name] est une URL d'image, retourne l'élément React <img>.
+      return <img className="border" width="100" src={data[name]} alt="Image" />;
+      // return <ImagePreview width="100" imageUrl={data[name]} altText="Image" />
+    }
+  
+
+    // Si ce n'est pas une URL d'image ou un nom qui commence par 'is', retourne les données telles quelles.
+    return data[name];
+  };
+
+
+
+
+
+
+
+
+
+
+
+
+
+

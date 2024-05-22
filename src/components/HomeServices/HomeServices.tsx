@@ -13,11 +13,13 @@ const HomeServices = () => {
   const services = servicesDatas
   
 
-  const db = indexDB();
-  // db.addData('service', services[0])
-  //   .then((result) => console.log(result))
-  //   .catch((error) => console.error(error));
-
+  for (let index = 0; index < services.length; index++) { 
+    const service = services[index];
+    // const db = indexDB();
+    // db.addData('service', service)
+    //   .then((result) => console.log(result))
+    //   .catch((error) => console.error(error));
+  }
 
 
   return (
