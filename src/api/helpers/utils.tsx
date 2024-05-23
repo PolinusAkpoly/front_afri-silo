@@ -86,14 +86,51 @@ export function indexDB() {
       return <img className="border" width="100" src={data[name]} alt="Image" />;
       // return <ImagePreview width="100" imageUrl={data[name]} altText="Image" />
     }
-  
-
+    if (typeof data[name] === 'string' && name === 'description') {
+      
+        return truncateText(data[name], 60);
+         
+      }
     // Si ce n'est pas une URL d'image ou un nom qui commence par 'is', retourne les données telles quelles.
-    return data[name];
+    
+    return  data[name];
   };
+  export const validateFormModal = (values: any, columns: any[]) => {
+    let errors: any = {};
+    let excludeInput = ['created_at', 'updated_at','files', 'options', 'roles', 'imageurl', '__v', 'id', 'slug','icon','link']
 
+    columns.forEach(column => {
 
+        if (excludeInput.includes(column.name.toLowerCase()) || column.name.toLowerCase().startsWith('created')) {
+            // Omitir la iteración si se cumple alguna de las condiciones
+            return;
+        }
+        if (!values[column.name]) {
+            errors = { ...errors, [column.name]: 'Required' };
+        }
 
+    });
+
+    console.log({ errors });
+
+    return errors;
+}
+
+export function fileToUrl(file: any) {
+  return new Promise((resolve, reject) => {
+    const reader = new FileReader();
+
+    reader.onload = () => {
+      resolve(reader.result);
+    };
+
+    reader.onerror = () => {
+      reject(reader.error);
+    };
+
+    reader.readAsDataURL(file);
+  });
+}
 
 
 

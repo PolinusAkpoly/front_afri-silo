@@ -10,6 +10,9 @@ import { Link, useParams } from 'react-router-dom';
 import { getHTMLContent, indexDB, ucfirst } from '../../api/helpers/utils';
 import { Column } from '../../models/Column';
 import FormModel from '../FormModel/FormModel';
+import ProductItem from '../ProductItem/ProductItem';
+import ViewProductModal from '../ViewProductModal/ViewProductModal';
+
 
 
 
@@ -24,10 +27,12 @@ const Admin: FC<AdminProps> = () => {
   const { model } = useParams()
   const [columns, setColumns] = useState<Column[]>([]);
   const [modal, setModal] = useState<boolean>(false);
+  const [showViewModal, setShowViewModal] = useState<boolean>(false);
   const [datas, setDatas] = useState<any>(null);
   // console.log(modal);
   // console.log(model);
-  console.log(columns);
+  // console.log(columns);
+console.log(datas);
 
  
 
@@ -38,11 +43,11 @@ const Admin: FC<AdminProps> = () => {
     // if (model) {
       const newModel = model || 'product';
       const  data = await dbInstance.getAllData(newModel)
-      console.log(data);
+      // console.log(data);
       
       setDatas(data)
       if (data  && data.length) {
-        const initialColumns = Object.keys(data[0]).filter((d: any) => d !== '_id' && d !== 'slug')
+        const initialColumns = Object.keys(data[0]).filter((d: any) => d !== '_id' && d !== 'slug' && d !== 'link' && d !== 'icon' && d !== 'created_at')
           .map((name) => ({ name }))
         setColumns(initialColumns);
         
@@ -79,6 +84,12 @@ const handleCloseFormModal = () =>{
           closeModal ={handleCloseFormModal}
          />)}
 
+        {/* {showViewModal && 
+        (<ViewProductModal
+
+          
+         />)} */}
+
          <div className="row"> 
        <div className='menu col-2'>
        <table className="table table-bordered">
@@ -113,7 +124,7 @@ const handleCloseFormModal = () =>{
         </tr>
       </thead>
           <tbody>
-            {/* {datas.map((data: any, index: number) => (
+            {datas?.map((data: any, index: number) => (
               <tr key={index}>
               <td> </td>
               {columns?.map((column: Column, index2: number) => (
@@ -121,16 +132,16 @@ const handleCloseFormModal = () =>{
                 {getHTMLContent(data, column.name)}
 
               </td>
-            ))} */}
+            ))}  
               <td>
-                <button type="button" className="btn btn-info">Voir</button>
+                <button type="button" onClick={()=>setShowViewModal(true)} className="btn btn-info">Voir</button>
                 <button type="button" className="btn btn-warning m-1">Modifier</button>
                 <button type="button" className="btn btn-danger mr-1">Supprimer</button>
               </td>
-            {/* </tr>
+              </tr>
            )
-           )}
-             */}
+           )} 
+             
             
           </tbody>
         </table>

@@ -97,7 +97,7 @@ const categorys = categorysDatas
       <Dropdown.Menu>
         {
           services.length ?
-          services.map((service: Service, index: number)=>{
+          services.map((service: any, index: number)=>{
             return <Dropdown.Item href={"/service/" + service.slug} key={index}>{service.title}</Dropdown.Item>
 
           })

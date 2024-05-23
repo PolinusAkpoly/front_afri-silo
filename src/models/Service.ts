@@ -6,4 +6,6 @@ export interface Service {
     description: string
     link: string
     slug: string
+    updated_at: Date | string | null
+    created_at: Date | string | null
 }
